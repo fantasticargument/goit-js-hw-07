@@ -8,7 +8,7 @@ const ingredients = [
 ];
 
 
-const list = document.querySelector('ul#ingredients');
+const link = document.querySelector('ul#ingredients');
 
 const ingredient = ingredients.map(el => {
     const liEl = document.createElement('li');
@@ -16,4 +16,4 @@ const ingredient = ingredients.map(el => {
     return liEl;
 })
 
-list.append(...ingredient)
+link.append(...ingredient)
