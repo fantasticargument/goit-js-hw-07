@@ -15,3 +15,21 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const makeElementLi = ({url,alt}) => {
+  
+    return `
+    <li>
+        <img src = ${url}
+            alt = ${alt}
+            width = 220/>
+    </li>`
+}
+const htmlElement = document.querySelector('ul#gallery')
+
+const makeListImages = images.map(makeElementLi).join(' ')
+htmlElement.insertAdjacentHTML('beforeend', makeListImages)
+console.log(makeListImages)
+
+htmlElement.style.display = 'flex';
+htmlElement.style.listStyleType = 'none';
